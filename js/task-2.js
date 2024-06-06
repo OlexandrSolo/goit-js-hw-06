@@ -14,7 +14,11 @@ class Storage {
 
     removeItem(itemToRemove) {
         const elementId = this.#items.indexOf(itemToRemove);
-        this.#items.splice(elementId, 1)
+        
+        if (elementId === -1) {
+            return console.log('TASK-2: Oops');
+        }
+            this.#items.splice(elementId, 1)  
     }
 }
 
